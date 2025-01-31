@@ -156,7 +156,7 @@ If you wanted to persist the theme selection even after the user closes the brow
 
 This app demonstrates how to implement a **light/dark theme toggle** using **React Context API** and **localStorage**. The theme changes are immediately reflected in the UI and persisted across sessions for a better user experience.
 
-```markdown
+# Context API Notes
 # Simple Example of React Context API
 
 ### What is Context API in Simple Terms?

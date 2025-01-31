@@ -25,7 +25,7 @@ const Model = ({ isOpen, onClose, children}) => {
         }
     }, [isOpen, onClose]);
 
-    if (!isOpen) return null;
+    if (!isOpen) return null; // this is a replacement for display: none; with this the component is completely removed from dom
     
     return (
         <div

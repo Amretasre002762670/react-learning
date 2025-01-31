@@ -191,8 +191,17 @@ const Modal = ({ isOpen, onClose, children }) => {
 
 export default Modal;
 ```
+## Notes
+## When to Use `return null;`?
 
----
+✅ **Use `return null;` when:**
+- You want to **fully remove the modal from the DOM** when closed.
+- You **don’t need to preserve** the state of inputs inside the modal.
+- You want to **prevent unnecessary event listeners** from being attached.
+
+🚫 **Use CSS toggling when:**
+- You need to **keep form data or other states** inside the modal between open/close events.
+- You want **transitions or animations** when opening/closing.
 
 ### **4. Running the App**
 

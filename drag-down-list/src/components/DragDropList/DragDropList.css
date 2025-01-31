@@ -1,0 +1,23 @@
+.drag-drop-container {
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    cursor: grab;
+  }
+  
+  li.dragging {
+    background: #cce5ff;
+  }
+  

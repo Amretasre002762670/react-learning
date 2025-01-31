@@ -105,42 +105,6 @@ const InfiniteScrollList = ({ fetchItems }) => {
 };
 ```
 
-## Optimizations
-
-### 1. Use `React.memo` and `useMemo` for Large Data Sets
-When dealing with infinite scroll and large datasets, use `React.memo` and `useMemo` to minimize unnecessary re-renders of items that don’t change.
-
-### 2. Throttling and Debouncing
-To prevent excessive calls to the backend, implement throttling or debouncing when fetching data. This ensures that data is only fetched after the user stops scrolling for a short period or when they approach the end of the list.
-
-#### Example of Throttling:
-```javascript
-import { useState, useEffect } from 'react';
-
-const useThrottle = (callback, delay) => {
-  const [timer, setTimer] = useState(null);
-
-  const throttle = () => {
-    if (timer) return;
-    setTimer(setTimeout(() => {
-      callback();
-      setTimer(null);
-    }, delay));
-  };
-
-  return throttle;
-};
-```
-
-## Summary
-- `React.memo` helps avoid unnecessary re-renders of list items.
-- `useMemo` optimizes expensive calculations.
-- `useCallback` optimizes callback functions.
-- `React Virtualized` / `React Window` helps render only visible items in a large list.
-- For infinite scrolling, use lazy loading of data with scroll event listeners and optimize with throttling or debouncing.
-
-By using these strategies, you can significantly improve the performance of rendering large lists and implementing efficient infinite scrolling in React.
-
 
 
 

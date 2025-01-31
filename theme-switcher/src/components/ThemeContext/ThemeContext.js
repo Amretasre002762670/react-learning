@@ -1,6 +1,5 @@
 import React, { useContext, createContext, useState, useEffect } from 'react';
 
-
 // create the theme context
 const ThemeContext = createContext();
 

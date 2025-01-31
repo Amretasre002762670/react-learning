@@ -22,7 +22,7 @@ const DragDropList = () => {
     // const removeElement = updatedList.splice(draggedItem, 1);
     // const itemToMove = removeElement[0];
     updatedList.splice(index, 0, itemToMove);
-    setDraggedItem(index);
+    setDraggedItem(index); // Helps in preventing redundant reordering when dragging over the same index.
     setItems(updatedList);
   }
 
